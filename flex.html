@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            display: flex;
+            flex-flow: row wrap;
+            text-align: center;
+        }
+        .body>*{
+            padding: 10px;
+            margin: 10px;
+            flex: 1 100%;
+            border-radius: 15px;
+        }
+        .header{
+            background-color: tomato;
+            height: 120px;
+        }
+        .footer{
+            background-color: aqua;
+            height: 80px;
+        }
+        .mid{
+            text-align: left;
+            background-color: lightgreen;
+            height: 300px;
+            font-size: 24px;
+        }
+        .left{
+            background-color: gold;
+        }
+        .right{
+            background-color: hotpink;
+        }
+        @media all and (min-width:800px){
+            .mid{
+                flex: 3;
+            }
+            .left{
+                order: 1;
+            }
+            .right{
+                order: 2;
+            }
+            .mid{
+                order: 2;
+            }
+            .footer{
+                order: 4;
+            }
+        }
+        @media all and (min-width:600px){
+            .center{
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="header">
+            <h1>Header</h1>
+        </div>
+        <div class="mid">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta,
+               tempore debitis quas aspernatur nostrum fuga maxime accusamus quidem cupiditate hic labore vitae vero,
+               quasi mollitia fugit reprehenderit autem natus dolore.
+            </p>
+        </div>
+            <div class="center left">
+                <h1>Left</h1>
+            </div>
+            <div class="center right">
+                <h1>Right</h1>
+        </div>
+        <div class="footer">
+            <h1>Footer</h1>
+        </div>
+    </div>
+</body>
+</html>
